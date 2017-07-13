@@ -1,0 +1,34 @@
+﻿Házi csocsóbajnokság
+
+Rendezzünk csocsóbajnokságot házon belül.
+A meccseket nem fogjuk lejátszani, de a csapatokat nektek kell kisorsolni.
+Aktív oktatókkal együtt 20-an vagyunk, ez 10 kétfős csapatot jelent.
+
+Véletlenszerűen sorsoljátok ki a 10 csapatot, és 2-2 csapatot rakjatok 5 asztal köré.
+
+Egy HTML oldalon jelenítsétek meg ízlés szerint a 5 asztalt, körülötte a négy játékos nevével.
+
+Arra ügyeljetek, hogy a sorsolás véletlenszerű legyen, és gombnyomásra új csapatokat és felállást tudjatok csinálni.
+Itt látjátok a listát:
+
+var players = [
+'Barbay Ádám',
+'Bodóczky Mihály',
+'Czető Márton',
+'Decsics Gergely',
+'Diera Andor',
+'Hadiné Gubics Andrea',
+'Hallak Hella',
+'Molnár László',
+'Németh Zoltán',
+'Rátkay András',
+'Sándor Zoltán Péter',
+'Soltesz Alexander',
+'Szabó Erik Márk',
+'Szabó Péter',
+'Szilberhorn Zoltán',
+'Taigiszer Dóra',
+'Timpfel Gábor',
+'Tóth Sára',
+'Mező Imre',
+'Koncz Gergely'];
