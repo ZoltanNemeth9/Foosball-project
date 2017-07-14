@@ -36,7 +36,7 @@ var parositasok = [];
 /* Az aktuális 5 játékot játszó párosítás a párositas[] tömbből,
 /* minden eleme {csapat1: csapatsorszám, csapat2: csapatsorszám} szerkezetű objektum
 */
-var aktualisMeccsek = [];
+var aktualisMeccs;
 /**
 /* Az összes lejátszott meccs eredményét tartalmazó tömb,
 /* minden eleme egy {csapat1: csapatsorszám, csapat2: csapatsorszám, gol1: egész, gol2: egész} szerkezetű objektum
