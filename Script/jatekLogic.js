@@ -1,7 +1,16 @@
 /**
-/* Egyetlen 5 jatékból álló forduló szimulálása
+/* Asztalhoz álló csapatpár kiválasztása a parositasok tömbből
 */
-function forduloLejatszasa(){
+function csapatparValasztasa(){
+	var meccsIndex = Math.floor(Math.random()*parositasok.length);
+	aktualisMeccs = parositasok[meccsIndex];
+	parositasok.splice(meccsIndex,1);
+}
+
+/**
+/* Egyetlen jatékból álló forduló szimulálása
+*/
+function forduloLejatszasa(){	
 	//Gólok generálása
 	aktualisMeccs.gol1 = Math.floor(Math.random() * 11);
 	aktualisMeccs.gol2 = 10 - aktualisMeccs.gol1;			
@@ -20,7 +29,7 @@ function forduloLejatszasa(){
 }
 
 /**
-/* Megkeres a meccsek[] tömbben egy elemet, ha tudjuk, hogy melyik két csapat játszotta
+/* Megkeres a meccsek tömbben egy elemet, ha tudjuk, hogy melyik két csapat játszotta
 /*
 /* @elsoCsapat		a meccset játszó egyik csapat sorszáma
 /* @masodikCsapat	a meccset játszó másik csapat sorszáma

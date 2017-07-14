@@ -24,7 +24,7 @@ var players = [
 'Koncz Gergely'];
 /**
 /* Véletlenszerű párosítással kialakult csapatokat tartalmazó tömb,
-/* minden eleme egy {tamado: 'jatekosnev', vedekezo: 'jatekosnev', pont: egész} szerkezetű objektum
+/* minden eleme egy {csapatnev: 'szin', tamado: 'jatekosnev', vedekezo: 'jatekosnev', pont: egész} szerkezetű objektum
 */
 
 var csapatok = [];
@@ -48,7 +48,7 @@ var aktualisMeccs;
 /* minden eleme egy {csapat1: csapatsorszám, csapat2: csapatsorszám, gol1: egész, gol2: egész} szerkezetű objektum
 */
 
-var meccsek= [];
+var meccsek = [];
 
 var csapatNevek = [
 'piros',
