@@ -41,4 +41,4 @@ var aktualisMeccsek = [];
 /* Az összes lejátszott meccs eredményét tartalmazó tömb,
 /* minden eleme egy {csapat1: csapatsorszám, csapat2: csapatsorszám, gol1: egész, gol2: egész} szerkezetű objektum
 */
-var meccsek = s[];
+var meccsek = [];
