@@ -2,7 +2,8 @@ function csapatGenerator(){
 	var i= 0;
 	var players2 = players;
 
-	while ( i < Math.floor(players.length/2)) {
+	var iter = Math.floor(players.length/2);
+	while ( i < iter) {
 
 		var csapat = {};
 
@@ -25,14 +26,15 @@ function csapatGenerator(){
 }
 
 function parositasGenerator(){
+	parositasok = [];
 
-	var par = {};
-
-	for(var i=0;i<csapatok.length-1;i++){
-		for(var j=i+1;j<csapatok.length;j++){
+	for(var i = 0; i < csapatok.length - 1; i++){
+		for(var j = i + 1; j < csapatok.length; j++){
+			var par = {};
 			par.csapat1 = i;
 			par.csapat2 = j;
 			parositasok.push(par);
 		}
 	}
+	console.log(parositasok);
 }
