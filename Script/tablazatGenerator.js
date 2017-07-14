@@ -1,0 +1,7 @@
+function csapatTabla(){
+  
+}
+
+function eredmenyTabla(){
+
+}
