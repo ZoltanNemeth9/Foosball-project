@@ -1,15 +1,31 @@
 function csapatTabla(){
-  var nodeCsapat = document.querySelector("#idCsapat thead");
 
-  var s = "<tr><td></td>";
+  var nodeCsapatHead = document.querySelector("#idCsapat thead");
+  var nodeCsapatBody = document.querySelector("#idCsapat tbody");
+
+  var s = "<tr><th>Csapatnév</th><th></th>";
+  var p = "<tr><td><b>Támadó</b></td><td></td>";
+  var q = "<tr><td><b>Védekező</b></td><td></td>";
 
   for(var i=0;i<csapatok.length;i++){
-    s += "<td>"+csapatok[i].csapatnev+"</td>";
+    s += "<th>"+csapatok[i].csapatnev+"</th>";
   }
   s += "</td>";
 
-  nodeCsapat.innerHTML = s;
+  nodeCsapatHead.innerHTML = s;
 
+  for(var i=0;i<csapatok.length;i++){
+    p += "<td>"+csapatok[i].tamado+"</td>";
+  }
+  p += "</td>";
+
+
+  for(var i=0;i<csapatok.length;i++){
+    q += "<td>"+csapatok[i].vedekezo+"</td>";
+  }
+  q += "</td>";
+
+  nodeCsapatBody.innerHTML = p + q;
 }
 
 function eredmenyTabla(){
