@@ -3,16 +3,16 @@
 */
 function forduloLejatszasa(){
 	//Gólok generálása
-	aktualisMeccsek[i].gol1 = Math.floor(Math.random() * 11);
-	aktualisMeccsek[i].gol2 = aktualisMeccsek[i].gol1;			
+	aktualisMeccs.gol1 = Math.floor(Math.random() * 11);
+	aktualisMeccs.gol2 = 10 - aktualisMeccs.gol1;			
 	//Pontok frissítése
-	if(aktualisMeccsek[i].gol1 < aktualisMeccsek[i].gol2){
-		csapatok[aktualisMeccsek[i].csapat2].pont += 3;
-	} else if(aktualisMeccsek[i].gol1 > aktualisMeccsek[i].gol2){
-		csapatok[aktualisMeccsek[i].csapat1].pont += 3;
+	if(aktualisMeccs.gol1 < aktualisMeccs.gol2){
+		csapatok[aktualisMeccs.csapat2].pont += 3;
+	} else if(aktualisMeccs.gol1 > aktualisMeccs.gol2){
+		csapatok[aktualisMeccs.csapat1].pont += 3;
 	} else {
-		csapatok[aktualisMeccsek[i].csapat1].pont += 1;
-		csapatok[aktualisMeccsek[i].csapat2].pont += 1;
+		csapatok[aktualisMeccs.csapat1].pont += 1;
+		csapatok[aktualisMeccs.csapat2].pont += 1;
 	}
 	//Párosítások átrakása a meccsek tömbbe
 	meccsek.push(aktualisMeccs);
