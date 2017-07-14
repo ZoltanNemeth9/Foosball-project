@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title></title>
-    <meta charset="UTF-8" />
+  	<meta charset="UTF-8" />
+    <title>Foosball bajnokság</title>
     <link type="text/css" href="foosball.css" rel="stylesheet" />
   </head>
   <body>
 
-    <script type="text/javascript" src="foosball.js"></script>
+  <div id="idJatek">
+  	<input type="button" id="idJatekButton" value="Játék indítása">
+  	<input type="button" id="idOsszesMeccsButton" value="Összes meccs lejátszása">
+  	<table id="idEredmeny">
+  		<thead>
+  		</thead>
+  		<tbody>
+  		</tbody>
+  	</table>
+  </div>
+    <script type="text/javascript" src="Script/foosball.js"></script>
+    <script type="text/javascript" src="Script/guiUpdate.js"></script>
+    <script type="text/javascript" src="Script/jatekLogic.js"></script>
   </body>
 </html>
