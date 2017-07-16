@@ -1,38 +1,35 @@
 /**
-/* Egyetlen 5 jatékból álló forduló szimulálása
+/* Asztalhoz álló csapatpár kiválasztása a parositasok tömbből
 */
-function forduloLejatszasa(){
-	//Gólok generálása
-	for(var i = 0; i < aktualisMeccsek.length; i++){
-		if(Math.random()<0.5){
-			aktualisMeccsek[i].gol1 = 10;
-			aktualisMeccsek[i].gol2 = Math.floor(Math.random() * 10);
-		}
-		else {
-			aktualisMeccsek[i].gol1 = Math.floor(Math.random() * 10);
-			aktualisMeccsek[i].gol2 = 10;
-		}		
-	}
-	//Pontok frissítése
-	for(var i = 0; i < aktualisMeccsek.length; i++){
-		if(aktualisMeccsek[i].gol1 < aktualisMeccsek[i].gol2){
-			csapatok[aktualisMeccsek[i].csapat2].pont += 3;
-		} else if(aktualisMeccsek[i].gol1 > aktualisMeccsek[i].gol2){
-			csapatok[aktualisMeccsek[i].csapat1].pont += 3;
-		} else {
-			csapatok[aktualisMeccsek[i].csapat1].pont += 1;
-			csapatok[aktualisMeccsek[i].csapat2].pont += 1;
-		}
-	}
-	//Párosítások átrakása a meccsek tömbbe
-	for(var i = 0; i < aktualisMeccsek.length; i++){
-		meccsek.push(aktualisMeccsek[i]);
-	}
-	aktualisMeccsek = [];
+function csapatparValasztasa(){
+	var meccsIndex = Math.floor(Math.random()*parositasok.length);
+	aktualisMeccs = parositasok[meccsIndex];
+	parositasok.splice(meccsIndex,1);
 }
 
 /**
-/* Megkeres a meccsek[] tömbben egy elemet, ha tudjuk, hogy melyik két csapat játszotta
+/* Egyetlen jatékból álló forduló szimulálása
+*/
+function forduloLejatszasa(){	
+	//Gólok generálása
+	aktualisMeccs.gol1 = Math.floor(Math.random() * 11);
+	aktualisMeccs.gol2 = 10 - aktualisMeccs.gol1;			
+	//Pontok frissítése
+	if(aktualisMeccs.gol1 < aktualisMeccs.gol2){
+		csapatok[aktualisMeccs.csapat2].pont += 3;
+	} else if(aktualisMeccs.gol1 > aktualisMeccs.gol2){
+		csapatok[aktualisMeccs.csapat1].pont += 3;
+	} else {
+		csapatok[aktualisMeccs.csapat1].pont += 1;
+		csapatok[aktualisMeccs.csapat2].pont += 1;
+	}
+	//Párosítások átrakása a meccsek tömbbe
+	meccsek.push(aktualisMeccs);
+	aktualisMeccs = null;
+}
+
+/**
+/* Megkeres a meccsek tömbben egy elemet, ha tudjuk, hogy melyik két csapat játszotta
 /*
 /* @elsoCsapat		a meccset játszó egyik csapat sorszáma
 /* @masodikCsapat	a meccset játszó másik csapat sorszáma
