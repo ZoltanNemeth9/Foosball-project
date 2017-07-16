@@ -1,83 +1,68 @@
-	       	        				
+
 <!DOCTYPE html>
 <html>
 <head>
-    <title>
-         Csocsó szimuláció
-    </title>
+    <title>Csocsó szimuláció</title>
     <meta charset="UTF-8" />
     <link href="foosball.css" type="text/css" rel="stylesheet" />
-
-    
 </head>
-
 <body>
-<div>
-	<table>
- <thead> 
-        	 
-            </thead>
-        <tbody>
-        	
-        	</tbody>
-    </table>
-</div>    
+	<div> <img src="header.png" width="1000px"><br><img src="jatekosok.png" width="1000px"><br></div>
+	<div>
+    	<button type="button" onclick="csapatGenerator();parositasGenerator();eredmenyTabla();">Csapattábla</button>
+		<table id="idCsapat">
+			<thead>
+			</thead>
+		  	<tbody>
+		    </tbody>
+	  	</table>
+	</div>
+	    <br>
+	    <br>
+	    <br>
+	<div>
+		<table id="idJatekter">
+		    <tr>
+			    <td>
+			        &nbsp;
+			    </td>
+			    <td rowspan="2">
+			        <img src="https://screenshots.en.sftcdn.net/en/scrn/3340000/3340258/world-soccer-foosball-05-406x535.png">
+			    </td>
+			    <td>
+			        &nbsp;
+			    </td>
+			</tr>
+			<tr>
+			    <td>
+			        &nbsp;
+			    </td>
+			    <td>
+			        &nbsp;
+			    </td>
+		    </tr>
+	  	</table>
+	</div>
     <br>
     <br>
+			<input type="button" id="idJatekButton" value="Játék indítása" onclick="jatekButton_ClickHandler();">
+		<input type="button" id="idOsszesMeccsButton" value="Összes meccs lejátszása" onclick="osszesMeccsButton_ClickHandler();">
+  	<div id="idJatek">
 
-    <br>
-<div>
-	<table>
-        <tr>
-            <td>
-                Játékos 1
-            </td>
+		<br>
+		<br>
+		<table id="idEredmeny">
+			<thead>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+  	</div>
 
-            <td rowspan="2">
-                <img src="https://screenshots.en.sftcdn.net/en/scrn/3340000/3340258/world-soccer-foosball-05-406x535.png">
-            </td>
-
-            <td>
-                Játékos 1
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Játékos 2
-            </td>
-            <td>
-                Játékos 2
-            </td>
-        </tr>
-    </table> </div>
-    <br>
-    <br>
-
-  <div id="idJatek">
-      <input type="button" id="idJatekButton" value="Játék indítása">
-      <input type="button" id="idOsszesMeccsButton" value="Összes meccs lejátszása">
-      <table id="idEredmeny">
-          <thead>
-          </thead>
-          <tbody>
-          </tbody>
-      </table>
-  </div>
-		
-
-
-
-
-
-    </table>
-     
-    <script type="text/javascript" src="Script/foosball.js"></script>
-    <script type="text/javascript" src="Script/guiUpdate.js"></script>
-    <script type="text/javascript" src="Script/jatekLogic.js"></script>
-
-
+	<script type="text/javascript" src="Script/foosball.js"></script>
+	<script type="text/javascript" src="Script/guiUpdate.js"></script>
+	<script type="text/javascript" src="Script/jatekLogic.js"></script>
+	<script type="text/javascript" src="Script/csapatGenerator.js"></script>
+	<script type="text/javascript" src="Script/tablak.js"></script>
 </body>
-
-
-
 </html>
